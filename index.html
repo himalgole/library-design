@@ -25,6 +25,7 @@
             align-items: center;
             padding: 0px 20px;
             transition: all 0.6s ease;
+            z-index: 9999999;
         }
 
         .logo {
@@ -111,6 +112,75 @@
             color: #fff;
             text-align: center;
         }
+
+        a {
+            text-decoration: none;
+        }
+
+        .categories {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .cat {
+            height: 300px;
+            width: 300px;
+            background-color: #0007;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .cate-head {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .menu-btns {
+            display: none;
+        }
+
+        @media screen and (max-width: 1110px) {
+            .nav-menu {
+                position: absolute;
+                left: 0px;
+                top: -300px;
+                width: 300px;
+                background-color: black;
+                text-align: center;
+                transition: all 0.5s ease;
+
+            }
+
+            .nav-menu li {
+                display: block;
+                padding: 5px 0px;
+            }
+
+            .menu-btns {
+                display: flex;
+                
+            }
+            
+            #menu-btn,#search-btn {
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+            }
+            #search-form
+            {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -123,6 +193,19 @@
             <input type="search" name="search" id="search-box" placeholder="Search Books">
             <input type="submit" value="Search" class="btn btn-search">
         </form>
+        <div class="menu-btns">
+            <button id="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" transform="scale(0.8)" fill="#fff">
+                    <path
+                        d="M39.8 41.95 26.65 28.8Q25.15 30.1 23.15 30.825Q21.15 31.55 18.9 31.55Q13.5 31.55 9.75 27.8Q6 24.05 6 18.75Q6 13.45 9.75 9.7Q13.5 5.95 18.85 5.95Q24.15 5.95 27.875 9.7Q31.6 13.45 31.6 18.75Q31.6 20.9 30.9 22.9Q30.2 24.9 28.8 26.65L42 39.75ZM18.85 28.55Q22.9 28.55 25.75 25.675Q28.6 22.8 28.6 18.75Q28.6 14.7 25.75 11.825Q22.9 8.95 18.85 8.95Q14.75 8.95 11.875 11.825Q9 14.7 9 18.75Q9 22.8 11.875 25.675Q14.75 28.55 18.85 28.55Z" />
+                </svg></button>
+            <button id="menu-btn" onclick="show_menu()">
+                <svg fill="#fff" transform="scale(0.8)" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                    <path d="M6 36V33H42V36ZM6 25.5V22.5H42V25.5ZM6 15V12H42V15Z" />
+                </svg>
+            </button>
+        </div>
+
         <ul class="nav-menu">
             <li><a href="" class="active">Home</a></li>
             <li><a href="">Portfolio</a></li>
@@ -141,32 +224,44 @@
         </section>
         <section class="section-second">
             <h2>Our Services</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus inventore nemo, quidem molestiae
-                commodi blanditiis soluta reiciendis tempore ex dicta nostrum sed accusantium culpa, nihil et. Possimus
-                mollitia sit sapiente architecto, quos suscipit. Nostrum doloremque nemo impedit ipsa reprehenderit
-                nihil nesciunt eveniet ab tempora? Tempora dolores, nesciunt ipsum perspiciatis voluptas, sequi
-                perferendis minus aliquam quam repellendus eos accusantium quae! Exercitationem consequatur voluptatibus
-                asperiores rem! Blanditiis veritatis dolorum repudiandae! Tempore facilis quibusdam sapiente accusantium
-                est, quidem quisquam inventore alias quos omnis. Quas accusamus et delectus illum sint, pariatur soluta
-                neque? Sequi, non. Cumque non, maxime harum laborum at quisquam et eligendi iusto exercitationem beatae
-                soluta, illum aperiam? Asperiores cumque dolore expedita eius corrupti tempore nobis eaque aperiam ex
-                iste? Consectetur fuga vel suscipit ea magnam voluptatibus hic nam aliquam sequi reiciendis, dolorem
-                debitis quisquam doloremque? Dolorem aperiam ea ratione quam, maiores similique exercitationem quaerat
-                iure repellat, repudiandae sequi perspiciatis. Nobis quo culpa quisquam rem nemo dolore, unde nostrum,
-                deleniti suscipit natus, inventore similique odio doloremque repellendus eligendi voluptatum
-                perspiciatis. Enim debitis dolorem voluptatibus unde nemo, odit consequuntur esse optio modi!
-                Repellendus ullam incidunt et iusto debitis similique nobis necessitatibus error reiciendis consectetur
-                id, in, illo velit corporis quisquam! Distinctio, sed ducimus.</p>
+            <p>The internet has already had a major impact on how people find and access information, and now the rising
+                popularity of e-books is helping transform Americans’ reading habits. In this changing landscape, public
+                libraries are trying to adjust their services to these new realities while still serving the needs of
+                patrons who rely on more traditional resources. In a new survey of Americans’ attitudes and expectations
+                for public libraries, the Pew Research Center’s Internet & American Life Project finds that many library
+                patrons are eager to see libraries’ digital services expand, yet also feel that print books remain
+                important in the digital age.
+
+            </p>
             <h2>Downloads</h2>
             <p>
-                <a href="#">HTML</a><br>
-                <a href="#">CSS</a><br>
-                <a href="#">JAVASCRIPT</a><br>
-                <a href="#">PHP</a><br>
-                <a href="#">PYTHON</a><br>
-                <a href="#">DJANGO</a><br>
+                <a href="#">Ramayan</a><br>
+                <a href="#">Muna Madan</a><br>
+                <a href="#">Ek Chihan</a><br>
+                <a href="#">Nepali Gajal Book</a><br>
+                <a href="#">Nepali Shabda Sagar</a><br>
+                <a href="#">Missed Call</a><br>
             </p>
+            <h2>See categories</h2>
+            <div class="categories">
 
+                <div class="cat">
+                    <div class="cate-head">
+                        <h3>Literature</h3>
+                    </div>
+                    <div class="cate-body">
+                        <img src="literature.jpg" alt="">
+                    </div>
+                </div>
+                <div class="cat">
+                    <div class="cate-head">
+                        <h3>Science</h3>
+                    </div>
+                    <div class="cate-body">
+                        <img src="science.jpg" alt="">
+                    </div>
+                    </di>
+                </div>
         </section>
     </main>
     <footer>
@@ -179,6 +274,17 @@
             var x = document.querySelector(".header");
             x.classList.toggle("sticky", window.scrollY > 100);
         })
+        function show_menu() {
+
+            var menu = document.querySelector(".nav-menu");
+            if (menu.style.top == "0px") {
+                menu.style.top = "-300px";
+            }
+            else {
+                menu.style.top = "0px";
+            }
+
+        }
     </script>
 </body>
 
