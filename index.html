@@ -32,9 +32,6 @@
             color: #fff;
         }
 
-        .nav-menu {
-            position: relative;
-        }
 
         .nav-menu li {
             display: inline-block;
@@ -45,59 +42,59 @@
             color: #fff;
             text-decoration: none;
             font-size: 20px;
-            
             padding: 5px 10px;
         }
-        .active
-        {
+
+        .active {
             background-color: aquamarine;
         }
-        .nav-menu li a:hover
-        {
+
+        .nav-menu li a:hover {
             transition: all 0.5s ease;
             color: lightblue;
             font-size: 22px;
         }
+
         .section-first {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url('download.jpeg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('download.jpeg');
             background-position: center;
             background-size: cover;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
         }
-        .banner
-        {
+
+        .banner {
             color: #fff;
             text-align: center;
         }
-     
-        #search-form
-        {
+
+        #search-form {
             background-color: #fff;
         }
-        #search-box
-        {
+
+        #search-box {
             height: 30px;
             width: 300px;
             outline: 0;
             padding: 0px 10px;
             border: 0;
         }
-        h2,p
-        {
+
+        h2,
+        p {
             padding: 10px;
         }
-        .sticky
-        {
+
+        .sticky {
             background-color: black;
             height: 80px;
             padding: 0px 20px;
         }
-        .btn-search
-        {
+
+        .btn-search {
             height: 30px;
             background-color: #fff;
             width: 60px;
@@ -106,14 +103,14 @@
             font-weight: 600;
             border-left: 2px solid black;
         }
-       footer
-       {
-        height: 200px;
-        width: 100%;
-        background-color: rgb(44, 42, 42);
-        color: #fff;
-        text-align: center;
-       }
+
+        footer {
+            height: 200px;
+            width: 100%;
+            background-color: rgb(44, 42, 42);
+            color: #fff;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -123,8 +120,8 @@
             <h1>Himal</h1>
         </a>
         <form action="#" id="search-form">
-           <input type="search" name="search" id="search-box" placeholder="Search Books">
-           <input type="submit" value="Search" class="btn btn-search">
+            <input type="search" name="search" id="search-box" placeholder="Search Books">
+            <input type="submit" value="Search" class="btn btn-search">
         </form>
         <ul class="nav-menu">
             <li><a href="" class="active">Home</a></li>
@@ -140,7 +137,7 @@
                 <h2>Welcome to The Official Website Of H-Library</h2>
                 <h3>Dharan-08, Lanagali.</h3>
             </div>
-           
+
         </section>
         <section class="section-second">
             <h2>Our Services</h2>
@@ -169,16 +166,18 @@
                 <a href="#">PYTHON</a><br>
                 <a href="#">DJANGO</a><br>
             </p>
-            
+
         </section>
     </main>
     <footer>
-        <div class="footer-header"><h2>H-library</h2></div>
+        <div class="footer-header">
+            <h2>H-library</h2>
+        </div>
     </footer>
     <script>
-        window.addEventListener("scroll",function(){
+        window.addEventListener("scroll", function () {
             var x = document.querySelector(".header");
-            x.classList.toggle("sticky", window.scrollY>100);
+            x.classList.toggle("sticky", window.scrollY > 100);
         })
     </script>
 </body>
